@@ -7,7 +7,7 @@ const deployedContracts = {
   devnet: {
     SNCat: {
       address:
-        "0x70ecd85563e7a8616143336694c799932fa5c321e3bdd03e1419e3b135b8ca4",
+        "0x37741cc0a8f7f92439060466e1ba74c704267db847eb63d19a165c81608d6b8",
       abi: [
         {
           type: "impl",
@@ -774,7 +774,7 @@ const deployedContracts = {
         },
       ],
       classHash:
-        "0x13a369d2eab7ed9765dd6643584ec5e5560aae021d4b2358763f3495232032a",
+        "0x50fc815d7eb79cc0254ad908087ca0dadfdcbad4728a352b9a57435d53c1a06",
     },
   },
 } as const;

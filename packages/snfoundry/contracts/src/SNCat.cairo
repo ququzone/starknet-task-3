@@ -117,6 +117,10 @@ use starknet::{ContractAddress, get_caller_address, get_contract_address};
         }
 
         fn withdraw(ref self: ContractState) {
+            self.ownable.assert_only_owner();
+            let strk_dispatcher = self.strk_dispatcher.read();
+            let success = strk_dispatcher.transfer(get_caller_address(), strk_dispatcher.balanceOf(get_contract_address()));
+            assert(success, 'Withdraw fee failed');
         }
     }
 
