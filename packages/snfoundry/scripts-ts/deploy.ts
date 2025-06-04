@@ -45,9 +45,11 @@ const deployScript = async (): Promise<void> => {
   await deployContract({
     contract: "SNCat",
     constructorArgs: {
-      initial_owner: "0x064b48806902a367c8598f4f95c305e8c1a1acba5f082d294a43793113115691",
-      strk_address: "0x04718f5a0Fc34cC1AF16A1cdee98fFB20C31f5cD61D6Ab07201858f4287c938D",
-      initial_price: 10000000000000000n,
+      initial_owner: process.env.OWNER || 
+        "0x064b48806902a367c8598f4f95c305e8c1a1acba5f082d294a43793113115691",
+      strk_address: process.env.STRK_ADDRESS || 
+        "0x04718f5a0Fc34cC1AF16A1cdee98fFB20C31f5cD61D6Ab07201858f4287c938D",
+      initial_price: 100000000000000n,
     },
   });
 };
